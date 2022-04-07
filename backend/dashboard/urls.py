@@ -1,0 +1,9 @@
+from django.urls import path
+
+from .views import sentiment_view, food_list
+
+
+urlpatterns = [
+    path('sentiment',sentiment_view, name = 'sentiment'),
+    path('food',food_list,name='available_food')
+    ]
