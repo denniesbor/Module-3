@@ -514,3 +514,28 @@ nav {
   padding: 0.25rem 0.5rem;
   border-radius: var(--radius);
 }
+
+.nomatch {
+
+  text-align: center;
+  margin-top: 1rem;
+
+}
+
+.suggestion {
+  background: var(--clr-white);
+  border-radius: var(--radius);
+  /* margin: 5px 0; */
+  box-shadow: var(--light-shadow);
+  transition: var(--transition);
+}
+
+.suggestion button {
+  background: transparent;
+  border-color: transparent;
+  text-transform: capitalize;
+  color: var(--clr-primary-5);
+  font-size: 1rem;
+  cursor: pointer;
+  padding-left: 0.25rem;
+}

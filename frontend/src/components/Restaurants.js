@@ -9,7 +9,7 @@ const Restaurants = ({ restaurants, removeRestaurant }) => {
       </div>
       <div>
         {restaurants.map((restaurant) => {
-          return <Restaurant key={restaurant.id} {...restaurant} removeRestaurant={removeRestaurant} />;
+          return <Restaurant key={restaurant.business_id} {...restaurant} removeRestaurant={removeRestaurant} />;
         })}
       </div>
     </section>
