@@ -29,7 +29,8 @@ DEBUG = True
 ALLOWED_HOSTS = [
     '127.0.0.1',
     'rdbmodule3.herokuapp.com',
-    'localhost'
+    'localhost',
+    '52.90.233.21'
 ]
 
 
@@ -105,6 +106,7 @@ SIMPLE_JWT = {
 CORS_ALLOWED_ORIGIN = [
     'http://127.0.0.1:3000',
     'http://localhost:3000/',
+    '*',
 ]
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
