@@ -17,7 +17,7 @@ function Home() {
   useEffect(() => {
     const loadFood = async() => {
       try {
-        const response = await axios.get("http://localhost:8000/api/food")
+        const response = await axios.get("http://52.90.233.21/api/food")
         console.log(response.data)
         setAvailableProducts(response.data.available_food)
       } catch (error) {
