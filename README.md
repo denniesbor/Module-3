@@ -24,8 +24,8 @@ We propose a system that performs sentiment analysis on restaurant reviews and h
 You can check it out! [Foodie App](http://ec2-52-90-233-21.compute-1.amazonaws.com/). This link will not be available after April, 2022 as it was hosted using training resources.
 
 # Team
-[Dennies[()
-[Margeuax}()
+[Dennies]()
+[Margaux]()
 [Rhodasi]()
 
 
