@@ -2,7 +2,7 @@
 
 Where Should I Eat?
 
-In 2018, Yelp had reviews from between 1307 (Forth Worth) to 18, 754 (NYC) restaraunts in 26 major cities! Yelp and other review sites are supposed to make it easier for customers to pick based on other user's reviews but how imagine reading even 5 reviews. So maybe you decide to choose the restaurant with the highest review ratings but you still have 50 restaurants with 5 star reviews. What's more some of those reviews aren't even talkign about the food, and still other are just downright confusing. Would'nt it be easier if a computer can do all that reading and anlysing for you?
+In 2018, Yelp had reviews from between 1307 (Forth Worth) to 18, 754 (NYC) restaraunts in 26 major cities! Yelp and other review sites are supposed to make it easier for customers to make informed choices based on other users' reviews. But you have to read the reviews, imagine reading even 5 reviews. No thanks! Maybe you'll just click on the ones with the highest rating. But what if you still have 50 restaurants with 5 star reviews? Okay, maybe you do decide to read the reviews after all. But wait, some of those reviews don't say much, some are rants and others are just downright confusing. Wouldn't it be easier if a computer can do all that reading and analysing for you?
 
 ![table of food](https://previews.123rf.com/images/libertos/libertos1108/libertos110800178/10306822-sirvi%C3%B3-una-comida-a-la-mesa-de-una-restaurante-.jpg)
 
