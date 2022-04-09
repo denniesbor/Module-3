@@ -1,5 +1,6 @@
-# Where Should I Eat?  
-## A review-sentiment and user-input based restaurant selection system
+# A User-reviews and Sentiment Based Restaurant Selection System
+
+Where Should I Eat?
 
 In 2018, Yelp had reviews from between 1307 (Forth Worth) to 18, 754 (NYC) restaraunts in 26 major cities! Yelp and other review sites are supposed to make it easier for customers to pick based on other user's reviews but how imagine reading even 5 reviews. So maybe you decide to choose the restaurant with the highest review ratings but you still have 50 restaurants with 5 star reviews. What's more some of those reviews aren't even talkign about the food, and still other are just downright confusing. Would'nt it be easier if a computer can do all that reading and anlysing for you?
 
@@ -24,7 +25,7 @@ We propose a system that performs sentiment analysis on restaurant reviews and h
 You can check it out! [Foodie App](http://ec2-52-90-233-21.compute-1.amazonaws.com/). This link will not be available after April, 2022 as it was hosted using training resources.
 
 # Team
-[Dennies]()
+[Dennies](https://github.com/denniesbor)
 [Margaux]()
 [Rhodasi]()
 
