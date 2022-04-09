@@ -15,7 +15,7 @@ We propose a system that performs sentiment analysis on restaurant reviews and h
 * [spaCY](https://spacy.io/)
 * [NLTK](https://www.nltk.org/)
 * [Gensim](https://radimrehurek.com/gensim/)
-* [Scikit learn[(https://scikit-learn.org/)
+* [Scikit learn](https://scikit-learn.org/)
 * [Django](https://www.djangoproject.com/)
 * [AWS](https://aws.amazon.com/)
 * [Colab](https://colab.research.google.com/)
@@ -27,7 +27,7 @@ You can check it out! [Foodie App](http://ec2-52-90-233-21.compute-1.amazonaws.c
 # Team
 [Dennies](https://github.com/denniesbor)
 [Margaux]()
-[Rhodasi]()
+[Rhodasi](https://github.com/DhasiM)
 
 
 
