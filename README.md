@@ -10,6 +10,11 @@ We propose a system that performs sentiment analysis on restaurant reviews and h
 * 1. Analyse the user's input to obtain the cuisine type and find the restaurants that offer that cuisine, food or similar options
 * 2. Analyse the sentiment of the reviews of the highest rated restaurants in that category and choose the ones with the best sentiment
 
+# Code and Data
+ * [Notebook]()
+ * [Front-End]()
+ * [Datasets]()
+
 # Technologies
 * [Python 3.8](https://www.python.org/downloads/release/python-380/)
 * [spaCY](https://spacy.io/)
