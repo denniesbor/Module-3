@@ -3,7 +3,7 @@ import React from 'react'
 function NoMatch() {
   return (
     <div className="nomatch">
-      <h4>We are sorry! The selected food is currently not available</h4>
+      <h4>We Are Sorry! The Selected Food Is Currently Not Available. Would you like us to find you something similar?</h4>
     </div>
   )
 }

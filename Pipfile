@@ -18,6 +18,8 @@ spacy = "*"
 scikit-learn = "==1.0.1"
 setuptools = "*"
 wheel = "*"
+gensim = "*"
+nltk = "*"
 
 [dev-packages]
 

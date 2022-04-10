@@ -36,3 +36,26 @@ class Meals(models.Model):
 class Recipe(models.Model):
     cuisine = models.CharField(max_length=50)
     diet = models.CharField(max_length=50)
+    
+class BusinessRestaurants(models.Model):
+    business_id=models.CharField(max_length=250, primary_key=True)
+    name=models.CharField(max_length=250)
+    address=models.CharField(max_length=100)
+    city=models.CharField(max_length=100)
+    state=models.CharField(max_length=100)
+    latitude=models.FloatField()
+    longitude=models.FloatField()
+    stars=models.FloatField()
+    stars_avg=models.FloatField()
+    sentiment=models.FloatField()
+    categories=models.TextField()
+    categories_mod=models.TextField()
+    
+class Reviews(models.Model):
+    business=models.ForeignKey(BusinessRestaurants, on_delete=models.PROTECT)
+    review_id=models.CharField(max_length=250)
+    user_id=models.CharField(max_length=250)
+    review_stars=models.IntegerField()
+    text = models.TextField()
+    review_sentiment = models.IntegerField(default=1)
+    date=models.DateField()

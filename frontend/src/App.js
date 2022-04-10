@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import About from './components/About';
 import Error from './components/Error';
 import Home from './components/Home';
+import Mapbox from './components/Mapbox';
 
 function App() {
   return (
@@ -13,8 +14,11 @@ function App() {
         <Route exact path="/">
         <Home/>
         </Route>
-        <Route path="/about/">
+        <Route exact path="/about/">
         <About/>
+        </Route>
+        <Route exact path="/business/:id">
+          < Mapbox />
         </Route>
         <Route path="*">
         <Error/>
