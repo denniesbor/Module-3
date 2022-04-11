@@ -37,31 +37,25 @@ labelencoderCuisine.fit_transform(recipe['cuisine'])
 
 
 def expanded(inp):
-
-    inpt = text_data_cleaning(' '.join(inp)) #tokenise input
-
-    inputs=[]
+    inputs= []
+    
+    user_input = [inp]
+    inpt = text_data_cleaning(' '.join(user_input)) #tokenise input
+    
     for i in inpt:
         for synset in wordnet.synsets(i):
             for lem in synset.lemmas():
                 #input_n.append(lem.name())
                 inputs.append(lem.name()) 
-    #input_test= [','.join(inputs)]
-    input_test= [','.join(inputs)]
-
+        #model_input= [','.join(inputs)]
+    model_input= [','.join(inputs)]
+    
     #  load models
-
-    predm=course_model.predict(input_test) #classifies course or meal type
-    predd=diet_model.predict(input_test) #classifies diet type
-    predc=cuisine_model.predict(input_test) #classifies cuisine type
+    predm=course_model.predict(model_input) #classifies course or meal type
+    predd=diet_model.predict(model_input) #classifies diet type
+    predc=cuisine_model.predict(model_input) #classifies cuisine type
 
     #labels must be inverse_transformed to words for matching to our restaurant database
     categories = [' '.join(labelencoderCourse.inverse_transform(predm)), ''.join(labelencoderDiet.inverse_transform(predd)), ''.join(labelencoderCuisine.inverse_transform(predc))] 
 
-    expand =[]
-    for cat in categories:
-        print(cat)
-        for synset in wordnet.synsets(cat):
-            for l in synset.lemmas():
-                expand.append(l.name())
-    return list(set(expand))
+    return categories

@@ -59,3 +59,7 @@ class Reviews(models.Model):
     text = models.TextField()
     review_sentiment = models.IntegerField(default=1)
     date=models.DateField()
+    
+
+class FoodItems(models.Model):
+    food_name = models.CharField(max_length=250);
