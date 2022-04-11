@@ -31,7 +31,6 @@ def food_list(request):
 
 @api_view()
 def single_restaurant_view(request,id):
-    print(id)
     responses = single_restaurant.return_rest(id)
     serializer = RestaurantSerializer(data=responses)
     if serializer.is_valid():

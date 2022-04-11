@@ -14,6 +14,7 @@ from .expanded_nltk import expanded
 # gensim models
 from .gensim_semantic import search_similar
 
+
 # main df
 df = pd.DataFrame(TrainDfLabels.objects.values_list('business_id','choice','stars_avg','sentiment','review_id','text','name','latitude','longitude'), \
     columns=['business_id','choice','stars_avg','sentiment','review_id','text','restaurant_name','latitude','longitude'])
@@ -23,14 +24,14 @@ def returnReviews(requests):
    
     #For output labels must be invers_transformed to words for matching to our restaurant database
     categories = expanded(requests['content'])
+    
+    business_ids,df_ = search_similar(' '.join(categories))
 
-    df_ = search_similar(categories)
-
-    unique_businesses = df_.restaurant_name.unique()
+    # unique_businesses = df_.restaurant_name.unique()
     
     data = []
-    for business in unique_businesses:
-        df_bus = df_[df_['restaurant_name']==business]
+    for business_id in business_ids:
+        df_bus = df_[df_['business_id']==business_id]
         bus_data = {
             "business_id":df_bus.iloc[0].business_id,
             "restaurant_name":df_bus.iloc[0].restaurant_name,

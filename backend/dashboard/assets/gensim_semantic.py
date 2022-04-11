@@ -7,6 +7,10 @@ from operator import itemgetter
 
 #generate a similarity matrix
 from gensim.similarities import MatrixSimilarity
+from .text_cleaning import text_data_cleaning
+
+# tokenizer
+tokenizer = text_data_cleaning
 
 #load indexed corpus
 tfidf_corpus = gensim.corpora.MmCorpus('tfidf_model_mm')
@@ -27,7 +31,7 @@ def return_reviews(businesses):
     relevant restaurants based on the semantic search   
     '''
     q = Reviews.objects.filter(business__in=businesses)\
-        .select_related('business').order_by('business_id','-review_stars').values_list('business_id','review_id','business__stars_avg','business__sentiment','text','business__name')
+        .select_related('business').order_by('-business__stars_avg','-business__sentiment','-review_stars').values_list('business_id','review_id','business__stars_avg','business__sentiment','text','business__name')
     
     columns=['business_id','review_id','stars_avg','sentiment','text','restaurant_name']
     df = pd.DataFrame(q, columns=columns)
@@ -42,7 +46,9 @@ resto['categories_mod'] = resto['categories_mod'].apply(lambda x: x.split(' '))
 
 def search_similar(search_term):
     
-    query_bow = dictionary.doc2bow(search_term)
+    print(search_term)
+    
+    query_bow = dictionary.doc2bow(tokenizer(search_term))
     query_tfidf = tfidf_model[query_bow]
     query_lsi = lsi_model[query_tfidf]
 
@@ -63,13 +69,9 @@ def search_similar(search_term):
 
         # )
         business_names.append(resto['business_id'][business[0]])
-        
         if j == (business_index.num_best-1):
             break
+   
+    names = business_names[:10]
     
-    businesses =  BusinessRestaurants.objects.filter(business_id__in=business_names).\
-        order_by("-stars_avg","-sentiment").values('business_id','stars_avg','sentiment')[:10]
-        
-    names = [name['business_id'] for name in businesses]
-    
-    return return_reviews(names)
+    return names, return_reviews(names)
