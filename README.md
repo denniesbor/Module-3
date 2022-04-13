@@ -11,7 +11,7 @@ We propose a system that performs sentiment analysis on restaurant reviews and h
 * 2. Analyse the sentiment of the reviews of the highest rated restaurants in that category and choose the ones with the best sentiment
 
 # Code and Data
- * [Notebook](https://github.com/denniesbor/Module-3/blob/main/Final_Notebook_Foodie_App.ipynb)
+ * [Notebook](https://github.com/denniesbor/Module-3/blob/main/Final_Notebook_Foodie_App_with_img.ipynb)
  * [Front-End](https://github.com/denniesbor/Module-3/tree/main/frontend)
  * [Back-End](https://github.com/denniesbor/Module-3/tree/main/backend)
  * [Datasets]()
